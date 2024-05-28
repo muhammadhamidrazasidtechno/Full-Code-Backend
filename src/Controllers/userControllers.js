@@ -89,6 +89,7 @@ if (!username || !email) {
     throw new ApiError(400,"username or email required")
 }
 
+
 const userExist = await user.findOne({
     $or : [{username},{email}]
 })
